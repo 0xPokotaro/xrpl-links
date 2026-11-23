@@ -48,7 +48,16 @@ window.XRPL_LINKS = {
         },
         {
           title: "ライブラリ",
-          items: []
+          items: [
+            { icon: "📦", name: "xrpl.js", note: "JavaScript / TypeScript 用のXRPLライブラリ", tags: ["公式"], links: [
+              { label: "Docs", url: "https://js.xrpl.org/" },
+              { label: "GitHub", url: "https://github.com/XRPLF/xrpl.js" }
+            ] },
+            { icon: "📦", name: "xrpl-py", note: "Python 用のXRPLライブラリ", tags: ["公式"], links: [
+              { label: "Docs", url: "https://xrpl-py.readthedocs.io/" },
+              { label: "GitHub", url: "https://github.com/XRPLF/xrpl-py" }
+            ] }
+          ]
         },
         {
           title: "ウォレット",
