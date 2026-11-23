@@ -17,11 +17,15 @@ assets/style.css  スタイル（ライト / ダーク自動切替）
 `assets/data.js` の該当グループの `items` に1行追加します。
 
 ```js
-{ icon: "📦", name: "xrpl.js", type: "Library", url: "https://js.xrpl.org/", note: "JavaScript / TypeScript 用の公式ライブラリ" },
+// 1つのリンク
+{ icon: "📦", name: "xrpl.js", url: "https://js.xrpl.org/", note: "JavaScript / TypeScript 用のライブラリ", tags: ["公式"] },
+// 複数のリンク（コミュニティなど）
+{ icon: "🇯🇵", name: "XRPL Japan", note: "日本のコミュニティ", links: [{ label: "X", url: "https://x.com/XRPLJapan" }] },
 ```
 
 - `items` が空のグループ（現在は「ライブラリ」）はページに表示されません。
-- `type` に新しい値を入れると、絞り込みボタンが自動で増えます。
+- `tags` は `"公式"` `"日本語"` `"無料枠"` が使えます。上部の絞り込みボタンと連動します。新しいタグを使うときは `data.js` 冒頭の `tags` にも追加してください。
+- 「（公式）」「（日本語対応）」などは説明文に書かず、`tags` で表してください。
 - 編集したら `updated` の日付も更新してください。
 
 ## ローカルで確認
