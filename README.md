@@ -39,5 +39,6 @@ python3 -m http.server 8000
 
 静的ファイルをそのまま配信できるサービスならどこでも動きます。
 
-- **GitHub Pages**: リポジトリの Settings → Pages → Source を「Deploy from a branch」、ブランチを `main` / `/ (root)` に設定
+- **GitHub Pages**: `main` に push すると `.github/workflows/pages.yml` が自動でデプロイします（Settings → Pages → Source は「GitHub Actions」）。
+  デプロイ時に `index.html` の `?v=__VERSION__` がコミットIDに置き換わり、更新がすぐブラウザに反映されます。
 - **Cloudflare Pages / Netlify / Vercel**: ビルドコマンドなし、公開ディレクトリはリポジトリのルート
